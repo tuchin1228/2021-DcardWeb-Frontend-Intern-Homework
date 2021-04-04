@@ -1,0 +1,55 @@
+$primary: #00beff;
+@import "~bootstrap/scss/bootstrap.scss";
+
+body {
+  background: #4783ce;
+}
+
+ul {
+  padding: 0;
+}
+ul.bar li {
+  color: white;
+}
+.view ul li {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0 0 0.5vh 0;
+}
+ul li {
+  list-style: none;
+  a {
+    color: white;
+    display: block;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    padding: 0.5vh 0;
+    &:hover {
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+      background: #1e448b;
+    }
+  }
+  a.active {
+    background: #00468e;
+    border-radius: 5px;
+  }
+}
+h2 {
+  font-weight: 600;
+  margin: 0;
+}
+p {
+  letter-spacing: 1.5px;
+}
+img{
+  width: 100%;
+  max-width: 500px;
+}
+@media all and (max-width: 768px) {
+  p {
+    font-size: 0.9rem;
+  }
+}
