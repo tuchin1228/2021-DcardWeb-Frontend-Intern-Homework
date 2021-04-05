@@ -25,9 +25,7 @@ export default function child() {
   };
 
   const getData = async (skip) => {
-    console.log('全部發送api');
-    const corsanywhere = 'https://cors-anywhere.herokuapp.com/';
-    const res = await fetch(`${corsanywhere}https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=30&$skip=${skip}&$format=JSON`);
+    const res = await fetch(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=30&$skip=${skip}&$format=JSON`);
     const data = await res.json();
     setAlldata(Alldata.concat(data));
     if (data.length !== 30) setisLast(true);

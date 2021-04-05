@@ -19,8 +19,7 @@ export default function cityView() {
     }
   };
   const getCityData = async (skip) => {
-    const corsanywhere = 'https://cors-anywhere.herokuapp.com/';
-    const res = await fetch(`${corsanywhere}https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/${match.params.city}?$top=30&$skip=${skip}&$format=JSON`);
+    const res = await fetch(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/${match.params.city}?$top=30&$skip=${skip}&$format=JSON`);
     const data = await res.json();
     console.log('data', data);
     setCityData(cityData.concat(data));
